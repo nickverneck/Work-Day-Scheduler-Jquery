@@ -1,4 +1,6 @@
 var hourDiv = document.querySelectorAll(".hour");
+var currentDayEl = $("#currentDay");
+currentDayEl.text(moment().format("Do MMMM YYYY"))
 // lets make sure the whole page is loaded before we start using Jquery
 $('document').ready(function()
 {
@@ -66,6 +68,7 @@ function loadLocalStorage()
     }
    
 }
+
 loadLocalStorage();
 setColor();
 
