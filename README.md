@@ -9,4 +9,5 @@ This scheduler was built with jquery &amp; moment.JS to facilite employees life 
 4. you can close and open your scheduler whenever, it will keep your tasks saved.
 
 ## ScreenShots
-
+![ss1](assets/ss.jpg)
+![ss2](assets/ss1.jpg)

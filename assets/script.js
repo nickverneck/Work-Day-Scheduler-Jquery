@@ -24,13 +24,14 @@ $('document').ready(function()
 
 function setColor()
 {
-var currentTime = moment().hour(); 
- 
+ var currentTime = moment().hour(); 
+
 
 for (i = 0 ; i < hourDiv.length; i++)
 {
     // since I starts at zero lets create a variable that will start at the same hour as our scheduler 
     j= i+9;
+    
     var textBox = hourDiv[i].children[1];
    
     if (j < currentTime)
@@ -68,12 +69,21 @@ function loadLocalStorage()
     }
    
 }
+// gotta create a function to update it's colors as the time passes.(every one minute)
+function updateColors() {
+setInterval(function () {
+     
+    setColor();
+     
+    },60000);
+   
+  }
 
 loadLocalStorage();
 setColor();
+updateColors();
 
 
-// gotta create a function to update it's colors as the time passes.
 
 
 }
